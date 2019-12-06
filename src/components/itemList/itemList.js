@@ -15,7 +15,7 @@ export default class ItemList extends Component {
 
 
     componentDidMount() {
-        this.SwapiService.getCharacter()
+        this.SwapiService.getAllPeople()
             .then((charList) => {
                 this.setState({
                     charList
@@ -29,8 +29,8 @@ export default class ItemList extends Component {
             return (
                 <li key={i} 
                 className="list-group-item"
-                >
-                {item}
+                onClick={ () => this.props.onCharSelected(i)}>
+                {item.name}
             </li>
             )
         })

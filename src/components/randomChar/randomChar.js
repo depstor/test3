@@ -43,7 +43,7 @@ export default class RandomChar extends Component {
 
     updateChar = () => {
         
-        const id = Math.floor(Math.random()*88 + 1);
+        const id = Math.floor(Math.random()*87 + 1);
         this.SwapiService.getCharacter(id)
             .then(this.onCharLoaded)
             .catch(this.onError);
